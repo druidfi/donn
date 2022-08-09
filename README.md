@@ -8,7 +8,7 @@ where the souls of the dead gather.
 
 ## Requirements
 
-- You mount your local path (e.g. Drupal theme) to /app in the container.
+- You mount your local path (e.g. Drupal theme) to /data in the container.
 - Your local path has folder `src/scss` which contains SASS files.
 - Your local path has folder `src/js` which contains JavaScript files.
 
@@ -21,15 +21,15 @@ where the souls of the dead gather.
 Examples on Drupal project:
 
 ```
-docker run -it --rm -v $(pwd)/path/to/theme:/app druidfi/donn:node-16 gulp production
+docker run -it --rm -v $(pwd)/path/to/theme:/data druidfi/donn:node-16 gulp production
 ```
 
 ```
-docker run -it --rm -v $(pwd)/path/to/theme:/app druidfi/donn:node-16 gulp development
+docker run -it --rm -v $(pwd)/path/to/theme:/data druidfi/donn:node-16 gulp development
 ```
 
 ```
-docker run -it --rm -v $(pwd)/path/to/theme:/app druidfi/donn:node-16 gulp watch
+docker run -it --rm -v $(pwd)/path/to/theme:/data druidfi/donn:node-16 gulp watch
 ```
 
 ## Environment variables

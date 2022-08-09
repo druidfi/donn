@@ -5,7 +5,7 @@ FROM node:${NODE_VERSION}-alpine
 LABEL org.opencontainers.image.authors="Druid".fi maintainer="Druid.fi"
 LABEL org.opencontainers.image.source="https://github.com/druidfi/donn" repository="https://github.com/druidfi/donn"
 
-ENV DATA_PATH=/app \
+ENV DATA_PATH=/data \
     DIST_FOLDER=dist \
     GULP_PATH=/opt/gulp \
     BROWSERSLIST="last 2 version, not dead" \

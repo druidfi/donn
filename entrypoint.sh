@@ -4,6 +4,7 @@ set -e
 
 if [ $1 == "gulp" ]; then
 
+  cd ${GULP_PATH}
   exec "$@"
 
 else
