@@ -1,0 +1,33 @@
+{
+  "name": "donn",
+  "version": "1.0.0",
+  "description": "Gulp configuration for Druid theme",
+  "author": "Druid",
+  "repository": "https://github.com/druidfi/donn",
+  "private": true,
+  "scripts": {
+    "gulp": "gulp",
+    "gulp-prod": "gulp production",
+    "gulp-dev": "gulp development",
+    "postinstall": "find node_modules/ -name \"*.info\" -type f -delete"
+  },
+  "dependencies": {
+    "@babel/preset-env": "^7.16.11",
+    "breakpoint-sass": "^2.7.1",
+    "browserslist": "^4.20.2",
+    "chalk": "^5.0.1",
+    "del": "^6.0.0",
+    "fancy-log": "^2.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-noop": "^1.0.1",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sass-glob": "^1.1.0",
+    "gulp-terser": "^2.1.0",
+    "sass": "^1.49.9"
+  }
+}
