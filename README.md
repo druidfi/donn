@@ -1,10 +1,8 @@
 # Donn
 
-[Docker Hub](https://hub.docker.com/repository/docker/druidfi/donn)
+Docker image which compiles CSS (from SASS) and JS files.
 
-In Irish mythology, Donn ("the dark one", from Proto-Celtic: *Dhuosnos) is an ancestor of the Gaels and is believed to
-have been a god of the dead. Donn is said to dwell in Tech Duinn (the "house of Donn" or "house of the dark one"),
-where the souls of the dead gather.
+[Docker Hub](https://hub.docker.com/repository/docker/druidfi/donn) has variants for Node 16 and 18 (arm64 and amd64).
 
 ## Requirements
 
@@ -15,6 +13,7 @@ where the souls of the dead gather.
 ## Tools
 
 - Gulp 4
+- Webpack [TODO]
 
 ## Using image in your project
 
@@ -53,3 +52,9 @@ Build and push images to Docker Hub:
 ```
 docker buildx bake -f docker-bake.hcl --pull --no-cache --push
 ```
+
+## Where the name "Donn" comes from?
+
+In Irish mythology, Donn ("the dark one", from Proto-Celtic: *Dhuosnos) is an ancestor of the Gaels and is believed to
+have been a god of the dead. Donn is said to dwell in Tech Duinn (the "house of Donn" or "house of the dark one"),
+where the souls of the dead gather.

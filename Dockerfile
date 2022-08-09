@@ -17,12 +17,9 @@ COPY gulp/ ${GULP_PATH}
 
 WORKDIR ${GULP_PATH}
 
-RUN apk --no-cache add bash tini
-
-RUN npm config set update-notifier false && \
+RUN apk --no-cache add bash tini && \
+    npm config set update-notifier false && \
     (cd ${GULP_PATH} && npm install && npm install --location=global gulp-cli && gulp --version)
-
-#RUN which gulp && exit 1
 
 ENTRYPOINT ["/sbin/tini", "--", "entrypoint"]
 
