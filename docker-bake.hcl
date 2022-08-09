@@ -3,7 +3,7 @@ variable "REPO_NAME" {
 }
 
 group "default" {
-    targets = ["donn-node-16"]
+    targets = ["donn-node-16", "donn-node-18"]
 }
 
 target "common" {
@@ -17,4 +17,12 @@ target "donn-node-16" {
         NODE_VERSION = 16
     }
     tags = ["${REPO_NAME}:node-16"]
+}
+
+target "donn-node-18" {
+    inherits = ["common"]
+    args = {
+        NODE_VERSION = 18
+    }
+    tags = ["${REPO_NAME}:node-18"]
 }

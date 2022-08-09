@@ -5,7 +5,11 @@ FROM node:${NODE_VERSION}-alpine
 LABEL org.opencontainers.image.authors="Druid".fi maintainer="Druid.fi"
 LABEL org.opencontainers.image.source="https://github.com/druidfi/donn" repository="https://github.com/druidfi/donn"
 
-ENV GULP_PATH=/opt/gulp
+ENV DATA_PATH=/app \
+    DIST_FOLDER=dist \
+    GULP_PATH=/opt/gulp \
+    BROWSERSLIST="last 2 version, not dead" \
+    SRC_FOLDER=src
 
 COPY entrypoint.sh /usr/local/bin/entrypoint
 

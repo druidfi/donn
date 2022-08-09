@@ -1,21 +1,17 @@
 {
   "name": "donn",
   "version": "1.0.0",
-  "description": "Gulp configuration for Druid theme",
+  "description": "Gulp configuration for CSS and JS compiling",
   "author": "Druid",
   "repository": "https://github.com/druidfi/donn",
   "private": true,
   "scripts": {
-    "gulp": "gulp",
-    "gulp-prod": "gulp production",
-    "gulp-dev": "gulp development",
     "postinstall": "find node_modules/ -name \"*.info\" -type f -delete"
   },
   "dependencies": {
     "@babel/preset-env": "^7.16.11",
     "breakpoint-sass": "^2.7.1",
-    "browserslist": "^4.20.2",
-    "chalk": "^5.0.1",
+    "browserslist": "^4.21.3",
     "del": "^6.0.0",
     "fancy-log": "^2.0.0",
     "gulp": "^4.0.2",

@@ -4,12 +4,11 @@ set -e
 
 if [ $1 == "gulp" ]; then
 
-  printf "\n\n✨ Running Gulp:\n\n"
   exec "$@"
 
 else
 
-  echo "# Exec CMD: $@"
-  exec "$@"
+  echo "Error: you cannot call '$@' on this image. You can call 'gulp' instead."
+  exit 1
 
 fi
