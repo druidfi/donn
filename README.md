@@ -12,7 +12,7 @@ Docker image which compiles CSS (from SASS) and JS files.
 
 ## Tools
 
-- Gulp 4
+- Gulp 4 (https://www.npmjs.com/package/gulp) - Frozen in time as there is no certainty for v5.
 - Webpack [TODO]
 
 ## Using image in your project
