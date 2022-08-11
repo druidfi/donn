@@ -1,3 +1,5 @@
+'use strict';
+
 const { dest, parallel, series, src, task, watch } = require('gulp');
 const noop = require('gulp-noop');
 const rename = require('gulp-rename');
