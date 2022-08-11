@@ -31,6 +31,24 @@ docker run -it --rm -v $(pwd)/path/to/theme:/data druidfi/donn:node-18 gulp deve
 docker run -it --rm -v $(pwd)/path/to/theme:/data druidfi/donn:node-18 gulp watch
 ```
 
+## Using it in druidfi/tools
+
+You can add these to e.g. `tools/make/project/theme.mk` and have `NODE_VERSION=18` in your `.env` file:
+
+```
+THEME_PATH := $(shell pwd)/$(WEBROOT)/themes/custom/druid_theme
+
+PHONY += drupal-build-theme
+drupal-build-theme:
+	$(call step,Build theme with Gulp...\n)
+	@docker run -it --rm -v $(THEME_PATH):/data druidfi/donn:node-$(NODE_VERSION) gulp production
+
+PHONY += drupal-watch-theme
+drupal-watch-theme:
+	$(call step,Watch theme with Gulp...\n)
+	@docker run -it --rm -v $(THEME_PATH):/data druidfi/donn:node-$(NODE_VERSION) gulp watch
+```
+
 ## Environment variables
 
 Environment variables (and their default values) which can be used to change configuration:
