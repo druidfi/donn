@@ -20,15 +20,15 @@ Docker image which compiles CSS (from SASS) and JS files.
 Examples on Drupal project:
 
 ```
-docker run -it --rm -v $(pwd)/path/to/theme:/data druidfi/donn:node-16 gulp production
+docker run -it --rm -v $(pwd)/path/to/theme:/data druidfi/donn:node-18 gulp production
 ```
 
 ```
-docker run -it --rm -v $(pwd)/path/to/theme:/data druidfi/donn:node-16 gulp development
+docker run -it --rm -v $(pwd)/path/to/theme:/data druidfi/donn:node-18 gulp development
 ```
 
 ```
-docker run -it --rm -v $(pwd)/path/to/theme:/data druidfi/donn:node-16 gulp watch
+docker run -it --rm -v $(pwd)/path/to/theme:/data druidfi/donn:node-18 gulp watch
 ```
 
 ## Environment variables
