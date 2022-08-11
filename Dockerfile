@@ -19,7 +19,7 @@ WORKDIR ${GULP_PATH}
 
 RUN apk --no-cache add bash tini && \
     npm config set update-notifier false && \
-    (cd ${GULP_PATH} && npm install && npm install --location=global gulp-cli && gulp --version)
+    (cd ${GULP_PATH} && npm ci && npm install --location=global gulp-cli && gulp --version)
 
 ENTRYPOINT ["/sbin/tini", "--", "entrypoint"]
 
