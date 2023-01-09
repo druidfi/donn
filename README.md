@@ -2,7 +2,7 @@
 
 Docker image which compiles CSS (from SASS) and JS files.
 
-[Docker Hub](https://hub.docker.com/repository/docker/druidfi/donn) has variants for Node 16 and 18 (arm64 and amd64).
+[Docker Hub](https://hub.docker.com/r/druidfi/donn) has variants for Node 16 and 18 (arm64 and amd64).
 
 ## Requirements
 
