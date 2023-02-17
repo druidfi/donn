@@ -2,6 +2,10 @@ variable "REPO_NAME" {
     default = "druidfi/donn"
 }
 
+variable "VERSION" {
+    default = "1.1"
+}
+
 group "default" {
     targets = ["donn-node-16", "donn-node-18"]
 }
@@ -16,7 +20,7 @@ target "donn-node-16" {
     args = {
         NODE_VERSION = 16
     }
-    tags = ["${REPO_NAME}:node-16", "${REPO_NAME}:1.0-node-16"]
+    tags = ["${REPO_NAME}:node-16", "${REPO_NAME}:${VERSION}-node-16"]
 }
 
 target "donn-node-18" {
@@ -24,5 +28,5 @@ target "donn-node-18" {
     args = {
         NODE_VERSION = 18
     }
-    tags = ["${REPO_NAME}:node-18", "${REPO_NAME}:1.0-node-18", "${REPO_NAME}:latest"]
+    tags = ["${REPO_NAME}:node-18", "${REPO_NAME}:${VERSION}-node-18", "${REPO_NAME}:latest"]
 }

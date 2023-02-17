@@ -2,6 +2,9 @@
 
 set -e
 
+echo "Update caniuse-lite..."
+npx -yq update-browserslist-db@latest
+
 if [ $1 == "gulp" ]; then
 
   cd ${GULP_PATH}
