@@ -19,15 +19,15 @@ Docker image which compiles CSS (from SASS) and JS files.
 
 Examples on Drupal project:
 
-```
+```shell
 docker run -it --rm -v $(pwd)/path/to/theme:/data druidfi/donn:node-18 gulp production
 ```
 
-```
+```shell
 docker run -it --rm -v $(pwd)/path/to/theme:/data druidfi/donn:node-18 gulp development
 ```
 
-```
+```shell
 docker run -it --rm -v $(pwd)/path/to/theme:/data druidfi/donn:node-18 gulp watch
 ```
 
@@ -35,7 +35,7 @@ docker run -it --rm -v $(pwd)/path/to/theme:/data druidfi/donn:node-18 gulp watc
 
 You can add these to e.g. `tools/make/project/theme.mk` and have `NODE_VERSION=18` in your `.env` file:
 
-```
+```shell
 THEME_PATH := $(shell pwd)/$(WEBROOT)/themes/custom/druid_theme
 
 PHONY += drupal-build-theme
@@ -61,13 +61,13 @@ Environment variables (and their default values) which can be used to change con
 
 Locally with M1:
 
-```
+```shell
 docker buildx bake -f docker-bake.hcl --pull --progress plain --no-cache --load --set "*.platform=linux/arm64"
 ```
 
 Build and push images to Docker Hub:
 
-```
+```shell
 docker buildx bake -f docker-bake.hcl --pull --no-cache --push
 ```
 

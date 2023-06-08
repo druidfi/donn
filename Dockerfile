@@ -2,7 +2,7 @@ ARG NODE_VERSION
 
 FROM node:${NODE_VERSION}-alpine
 
-LABEL org.opencontainers.image.authors="Druid".fi maintainer="Druid.fi"
+LABEL org.opencontainers.image.authors="Druid.fi" maintainer="Druid.fi"
 LABEL org.opencontainers.image.source="https://github.com/druidfi/donn" repository="https://github.com/druidfi/donn"
 
 ENV DATA_PATH=/data \
