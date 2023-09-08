@@ -26,9 +26,16 @@ if [ "$1" == "gulp" ]; then
   cd "${GULP_PATH}"
   exec "$@"
 
+elif [ "$1" == "webpack" ]; then
+
+  echo -e "\n[DONN] Running Webpack...\n"
+  cd "${WEBPACK_PATH}"
+  shift;
+  exec webpack-cli "$@"
+
 else
 
-  echo "Error: you cannot call '$@' on this image. You can call 'gulp' instead."
+  echo "Error: you cannot call '$@' on this image. You can call 'gulp' or 'webpack' instead."
   exit 1
 
 fi

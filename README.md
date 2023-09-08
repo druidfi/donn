@@ -13,21 +13,21 @@ Docker image which compiles CSS (from SASS) and JS files.
 ## Tools
 
 - Gulp 4 (https://www.npmjs.com/package/gulp) - Frozen in time as there is no certainty for v5.
-- Webpack [TODO]
+- Webpack [In progress]
 
 ## Using image in your project
 
 Examples on Drupal project:
 
-```shell
+```console
 docker run -it --rm -v $(pwd)/path/to/theme:/data druidfi/donn:node-18 gulp production
 ```
 
-```shell
+```console
 docker run -it --rm -v $(pwd)/path/to/theme:/data druidfi/donn:node-18 gulp development
 ```
 
-```shell
+```console
 docker run -it --rm -v $(pwd)/path/to/theme:/data druidfi/donn:node-18 gulp watch
 ```
 
@@ -61,13 +61,13 @@ Environment variables (and their default values) which can be used to change con
 
 Locally with M1:
 
-```shell
+```console
 docker buildx bake -f docker-bake.hcl --pull --progress plain --no-cache --load --set "*.platform=linux/arm64"
 ```
 
 Build and push images to Docker Hub:
 
-```shell
+```console
 docker buildx bake -f docker-bake.hcl --pull --no-cache --push
 ```
 

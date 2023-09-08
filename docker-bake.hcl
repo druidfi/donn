@@ -13,6 +13,13 @@ group "default" {
 target "common" {
     platforms = ["linux/amd64", "linux/arm64"]
     context = "."
+    labels = {
+        "org.opencontainers.image.url" = "https://github.com/druidfi/donn"
+        "org.opencontainers.image.source" = "https://github.com/druidfi/donn"
+        "org.opencontainers.image.licenses" = "MIT"
+        "org.opencontainers.image.vendor" = "Druid Oy"
+        "org.opencontainers.image.created" = "${timestamp()}"
+    }
 }
 
 target "donn-node-16" {

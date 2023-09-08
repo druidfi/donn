@@ -1,8 +1,9 @@
 {
-  "name": "donn",
+  "name": "donn-gulp",
   "version": "1.0.0",
   "description": "Gulp configuration for CSS and JS compiling",
   "author": "Druid",
+  "license": "MIT",
   "repository": "https://github.com/druidfi/donn",
   "private": true,
   "scripts": {
