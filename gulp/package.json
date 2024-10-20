@@ -1,6 +1,6 @@
 {
   "name": "donn",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "Gulp configuration for CSS and JS compiling",
   "author": "Druid",
   "repository": "https://github.com/druidfi/donn",
@@ -25,5 +25,8 @@
     "gulp-sass-glob": "^1.1.0",
     "gulp-terser": "^2.1.0",
     "sass": "^1.49.9"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }

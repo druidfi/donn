@@ -1,9 +1,6 @@
-ARG NODE_VERSION
+ARG NODE_VERSION=20
 
 FROM node:${NODE_VERSION}-alpine
-
-LABEL org.opencontainers.image.authors="Druid.fi" maintainer="Druid.fi"
-LABEL org.opencontainers.image.source="https://github.com/druidfi/donn" repository="https://github.com/druidfi/donn"
 
 ENV DATA_PATH=/data \
     DIST_FOLDER=dist \

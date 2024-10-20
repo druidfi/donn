@@ -13,21 +13,20 @@ Docker image which compiles CSS (from SASS) and JS files.
 ## Tools
 
 - Gulp 4 (https://www.npmjs.com/package/gulp) - Frozen in time as there is no certainty for v5.
-- Webpack [TODO]
 
 ## Using image in your project
 
 Examples on Drupal project:
 
-```shell
+```console
 docker run -it --rm -v $(pwd)/path/to/theme:/data druidfi/donn:node-18 gulp production
 ```
 
-```shell
+```console
 docker run -it --rm -v $(pwd)/path/to/theme:/data druidfi/donn:node-18 gulp development
 ```
 
-```shell
+```console
 docker run -it --rm -v $(pwd)/path/to/theme:/data druidfi/donn:node-18 gulp watch
 ```
 
@@ -35,7 +34,7 @@ docker run -it --rm -v $(pwd)/path/to/theme:/data druidfi/donn:node-18 gulp watc
 
 You can add these to e.g. `tools/make/project/theme.mk` and have `NODE_VERSION=18` in your `.env` file:
 
-```shell
+```makefile
 THEME_PATH := $(shell pwd)/$(WEBROOT)/themes/custom/druid_theme
 
 PHONY += drupal-build-theme
@@ -53,21 +52,23 @@ drupal-watch-theme:
 
 Environment variables (and their default values) which can be used to change configuration:
 
-- `BROWSERSLIST="last 2 version, not dead"`
-- `DIST_FOLDER=dist`
-- `SRC_FOLDER=src`
+```env
+BROWSERSLIST="last 2 version, not dead"
+DIST_FOLDER=dist
+SRC_FOLDER=src
+```
 
 ## Build images
 
 Locally with M1:
 
-```shell
+```console
 docker buildx bake -f docker-bake.hcl --pull --progress plain --no-cache --load --set "*.platform=linux/arm64"
 ```
 
 Build and push images to Docker Hub:
 
-```shell
+```console
 docker buildx bake -f docker-bake.hcl --pull --no-cache --push
 ```
 
